@@ -1,0 +1,240 @@
+/*
+  Henry Tiet — Portfolio stylesheet (shared by all pages)
+  Repository: https://github.com/henrytiet/cse134bhw3
+*/
+
+/* ===== Custom properties ===== */
+:root {
+  --color-sky: #e3f3fb;       /* page background */
+  --color-wall: #2f3437;      /* dark text */
+  --color-card: #ffffff;
+  --color-hold: #d2601a;      /* orange accent */
+  --color-rope: #17707a;      /* teal accent, links */
+  --color-focus: #ffd23f;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-heading: "Trebuchet MS", "Segoe UI", sans-serif;
+  --content-width: 60rem;
+  --space: 1rem;
+  --radius: 0.75rem;
+}
+
+/* ===== Base / typography ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-wall);
+  background-color: var(--color-sky);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin: 0 0 calc(var(--space) * 0.75);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; color: var(--color-rope); }
+h3 { font-size: 1.25rem; }
+
+p,
+ul,
+ol {
+  margin: 0 0 var(--space);
+}
+
+/* keep media inside the screen so nothing forces horizontal scroll */
+img,
+iframe,
+video,
+canvas {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: var(--color-rope);
+}
+
+a:hover {
+  color: var(--color-hold);
+}
+
+/* ===== Header and footer ===== */
+header,
+main,
+footer {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space);
+}
+
+/* Child combinator: only the list directly inside a nav becomes a flex row */
+nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--space) * 0.75);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Descendant combinator: links anywhere in the header become pills */
+header a {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  color: var(--color-wall);
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--color-card);
+  border-radius: 999px;
+}
+
+/* Attribute selector: marks the nav link for the current page */
+nav a[aria-current="page"] {
+  color: var(--color-card);
+  background-color: var(--color-rope);
+}
+
+footer {
+  border-top: 2px solid var(--color-rope);
+}
+
+/* ===== Cards ===== */
+climb-hold {
+  display: block;
+  background-color: var(--color-card);
+  border-left: 0.5rem solid var(--color-hold);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 1.5);
+  margin-bottom: calc(var(--space) * 1.5);
+}
+
+section {
+  margin-bottom: calc(var(--space) * 2);
+}
+
+.grade {
+  border: 1px solid var(--color-hold);
+  border-radius: 0.25em;
+  padding: 0 0.3em;
+}
+
+/* ===== Forms ===== */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space);
+  margin-bottom: calc(var(--space) * 2);
+}
+
+/* Message box and submit button span the full width */
+fieldset:last-of-type,
+form > button {
+  grid-column: 1 / -1;
+}
+
+/* The welcome dialog's form is just one button, so it skips the grid */
+dialog form {
+  display: block;
+  margin: 0;
+}
+
+fieldset {
+  background-color: var(--color-card);
+  border: 2px solid var(--color-rope);
+  border-radius: var(--radius);
+  padding: var(--space);
+  margin: 0;
+}
+
+legend {
+  font-weight: 700;
+}
+
+/* Child combinator: spacing between each label/input row in a fieldset */
+fieldset > div {
+  margin-bottom: 0.75rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  font: inherit;
+  border: 2px solid var(--color-wall);
+  border-radius: 0.4em;
+}
+
+/* Attribute selector + adjacent sibling combinator:
+   gap between each radio button and the label right after it */
+input[type="radio"] + label {
+  margin-left: 0.4em;
+}
+
+progress {
+  width: 100%;
+  accent-color: var(--color-hold);
+}
+
+button {
+  font: inherit;
+  padding: 0.6em 1.2em; /* em: scales with the button's own font size */
+  color: var(--color-card);
+  background-color: var(--color-rope);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-hold);
+}
+
+dialog {
+  max-width: calc(100% - 2rem);
+  border: 2px solid var(--color-rope);
+  border-radius: var(--radius);
+}
+
+/* ===== Focus ===== */
+/* Dark ring with a yellow halo, visible on light and white backgrounds */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+iframe:focus,
+audio:focus,
+video:focus {
+  outline: 3px solid var(--color-wall);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 7px var(--color-focus);
+}
+
+/* ===== Narrow screens ===== */
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav > ul {
+    justify-content: center;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}

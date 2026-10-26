@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Henry Tiet's portfolio: rappel down the climbing wall to explore projects, skills, and experience.">
+    <meta name="author" content="Henry Tiet">
+    <title>Henry Tiet | Portfolio</title>
+    <link rel="icon" href="images/climber.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="index.css">
+    <script src="js/hello-world.js" defer></script>
+</head>
+<body>
+    <hello-world></hello-world>
+
+    <header id="top">
+        <nav aria-label="Main">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <dialog open aria-labelledby="welcome-heading">
+        <h2 id="welcome-heading">Welcome to the wall!</h2>
+        <p>The route is still being set! For now, take a look around in HTML only.</p>
+        <form method="dialog">
+            <button>Start descending</button>
+        </form>
+    </dialog>
+
+    <noscript>
+        <p>The climber animation needs JavaScript.</p>
+    </noscript>
+
+    <main>
+        <section aria-labelledby="intro-heading">
+            <climb-hold>
+                <picture>
+                    <source media="(min-width: 800px)" srcset="images/climber-wide.svg">
+                    <img src="images/climber.svg" alt="Illustration of a climber clipped into a rope at the top of a wall" width="200" height="200">
+                </picture>
+                <h1 id="intro-heading">Hi, I'm Henry Tiet!</h1>
+                <p>I'm a <strong>computer engineering student</strong> and rock climber. Let's scroll down to see how I got up here!</p>
+                <!-- Will make this sticky to follow the user after CSS is allowed -->
+                <p>Climbing progress: <progress max="100" value="0">0%</progress></p> 
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <climb-hold>
+                <article>
+                    <h3>WasU</h3>
+                    <p>A bilingual (English/Japanese) social app that helps Waseda University students meet friends, join student circles, and find campus events. It's live on the App Store as <b>WasU App</b> and on the web.</p>
+                    <p>I mainly build the frontend on a small team: the onboarding flow and animated first-launch welcome, discover and profile cards, photo uploading, event screens, and the app's icon and Liquid Glass tab bar.</p>
+                    <p>Tools: React Native, Expo, Next.js, Tailwind CSS, Supabase</p>
+                    <p><a href="https://apps.apple.com/us/app/wasu-app/id6790273930">Download on the App Store</a> or visit <a href="https://wasuconnect.com">wasuconnect.com</a></p>
+                </article>
+            </climb-hold>
+
+            <climb-hold>
+                <article>
+                    <h3>Self-Driving RC Car</h3>
+                    <p>Built a fully autonomous RC car that navigates with GPS and camera vision, using deep learning models to run the fastest laps around race tracks and follow routes.</p>
+                    <p>Tools: Python, ROS2, Linux</p>
+                </article>
+            </climb-hold>
+
+            <climb-hold>
+                <article>
+                    <h3>Retrieval-Augmented Generation Web App</h3>
+                    <p>During my internship at FPT Software, I developed a web app with a RAG pipeline that lets an LLM answer questions using its own document store.</p>
+                    <p>Tools: Flask, Azure OpenAI, Milvus</p>
+                </article>
+            </climb-hold>
+
+            <climb-hold>
+                <article>
+                    <h3>Generative AI Applications</h3>
+                    <p>Developed full stack applications using LLM APIs and evaluated the strengths and shortcomings of coding agents to improve their output quality.</p>
+                    <p>Tools: OpenAI, Python, Git</p>
+                </article>
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="about-heading">
+            <climb-hold>
+                <h2 id="about-heading">About Me</h2>
+                <p>When I'm not coding, I'm usually at the <b>climbing gym</b> working out the <i>beta</i> for a new problem. My current project is a <span class="grade">V4</span> that I have <em>almost</em> sent.</p>
+                <p>Climbing taught me to break hard problems into small moves, and I bring that to software too.</p>
+                <p>I also love to cycle with my friends, riding fixed gears through the city, or road bikes on 70 mile rides.</p>
+                <p>I've had a deep passion for cars, so naturally I love to work on my cars and take them to the canyons! </p>
+                <svg width="120" height="60" viewBox="0 0 120 60" role="img" aria-labelledby="rope-title">
+                    <title id="rope-title">A rope running between two climbing holds</title>
+                    <path d="M10 30 Q60 0 110 30" fill="none" stroke="black" stroke-width="3"/>
+                    <circle cx="10" cy="30" r="8" fill="orange"/>
+                    <circle cx="110" cy="30" r="8" fill="teal"/>
+                </svg>
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="skills-heading">
+            <climb-hold>
+                <h2 id="skills-heading">Skills</h2>
+                <ul>
+                    <li>Java, C, C++, Python, SystemVerilog</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Git, Linux, MATLAB, ModelSim, Quartus</li>
+                    <li>IT support: servers, networking, and user administration</li>
+                </ul>
+                <p>See the full details on my <a href="resume.html">Resume</a>.</p>
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="route-heading">
+            <climb-hold>
+                <h2 id="route-heading">How to Climb This Page</h2>
+                <ol>
+                    <li>Scroll down to lower the climber.</li>
+                    <li>Stop at a hold to read its details.</li>
+                    <li>Reach the ground and send me back up the wall!</li>
+                </ol>
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="gym-heading">
+            <climb-hold>
+                <h2 id="gym-heading">Where I Climb</h2>
+                <iframe src="https://www.google.com/maps?q=Mesa+Rim+Climbing+Center+San+Diego&amp;output=embed" title="Map of Mesa Rim Climbing Center in San Diego" width="400" height="300" loading="lazy"></iframe>
+            </climb-hold>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+            <climb-hold>
+                <h2 id="contact-heading">Reached the Ground?</h2>
+                <p>Let's work together. <a href="contact.html">Send me a message</a> or check out my <a href="resume.html">Resume</a>.</p>
+                <!-- Need to add functionality to back to top with JS -->
+                <button type="button">Back to top</button>
+            </climb-hold>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Henry Tiet</p>
+        <nav aria-label="Footer">
+            <ul>
+                <li><a href="https://github.com/henrytiet">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/henry-tiet">LinkedIn</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

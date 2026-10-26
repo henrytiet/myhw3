@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect x="0" y="0" width="400" height="200" fill="peru"/>
+  <circle cx="60" cy="50" r="10" fill="orange"/>
+  <circle cx="320" cy="140" r="10" fill="teal"/>
+  <line x1="200" y1="0" x2="200" y2="60" stroke="black" stroke-width="3"/>
+  <circle cx="200" cy="75" r="15" fill="black"/>
+  <line x1="200" y1="90" x2="200" y2="140" stroke="black" stroke-width="6"/>
+  <line x1="200" y1="105" x2="170" y2="80" stroke="black" stroke-width="5"/>
+  <line x1="200" y1="105" x2="230" y2="80" stroke="black" stroke-width="5"/>
+  <line x1="200" y1="140" x2="175" y2="185" stroke="black" stroke-width="5"/>
+  <line x1="200" y1="140" x2="225" y2="185" stroke="black" stroke-width="5"/>
+</svg>

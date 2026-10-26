@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Henry Tiet.">
+    <title>Contact | Henry Tiet</title>
+    <link rel="icon" href="images/climber.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Main">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Me</h1>
+        <p>Fill out each field to move the climber up the boulder. Submit to top out!</p>
+        <p><label for="boulder-progress">Boulder progress:</label> <progress id="boulder-progress" max="4" value="0">0 of 4 holds</progress></p>
+
+        <form action="#" method="post" name="contact" data-netlify="true">
+            <fieldset>
+                <legend>About you</legend>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Reason for reaching out</legend>
+                <div>
+                    <input type="radio" id="reason-job" name="reason" value="job" checked>
+                    <label for="reason-job">Job opportunity</label>
+                </div>
+                <div>
+                    <input type="radio" id="reason-project" name="reason" value="project">
+                    <label for="reason-project">Project collaboration</label>
+                </div>
+                <div>
+                    <input type="radio" id="reason-climb" name="reason" value="climb">
+                    <label for="reason-climb">Let's go climbing</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your message</legend>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+            </fieldset>
+
+            <button type="submit">Send message</button>
+        </form>
+
+        <section aria-labelledby="other-heading">
+            <h2 id="other-heading">Other Ways to Reach Me</h2>
+            <address>
+                Henry Tiet<br>
+                <a href="mailto:henrytiet@gmail.com">henrytiet@gmail.com</a><br>
+                <a href="https://github.com/henrytiet">github.com/henrytiet</a>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Henry Tiet</p>
+    </footer>
+</body>
+</html>
